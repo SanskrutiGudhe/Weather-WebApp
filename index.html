@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <h2>Weather Forecast</h2>
+            <form action="WeatherServlet" method="GET" id="weatherForm">
+                <input type="text" name="city" id="cityInput" placeholder="Enter city name..." required>
+                <button type="submit" id="searchBtn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="search" width="20">
+                </button>
+            </form>
+        </div>
+
+        <div class="weather-card" id="weatherResult">
+            <h1 class="city-name" id="displayCity">City</h1>
+            <div class="weather-details">
+                <div class="temp-container">
+                    <span class="temp" id="displayTemp">--</span><span class="unit">°C</span>
+                </div>
+                <p class="condition" id="displayCondition">Waiting for input...</p>
+                
+                <div class="extra-info">
+                    <div class="col">
+                        <p class="label">Humidity</p>
+                        <p class="value"><span id="displayHumidity">--</span>%</p>
+                    </div>
+                    <div class="col">
+                        <p class="label">Wind Speed</p>
+                        <p class="value"><span id="displayWind">--</span> km/h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
